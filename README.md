@@ -18,7 +18,7 @@ yarn dev
 
 Открыть [http://localhost:3000](http://localhost:3000)
 
-Или [tuimada.ru](tuimada.ru) если сервер стоит за Nginx
+Или [epd.lenacom.ru](epd.lenacom.ru) если сервер стоит за Nginx
 
 ## Файлы
 
