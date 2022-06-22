@@ -1,0 +1,416 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto.ttf");
+}
+
+/* добавить ко всем корневым компонентам */
+.globFont {
+    font-size: 14.2px !important;
+    font-family: "Roboto", "Helvetica" !important;
+    letter-spacing: 0rem !important;
+}
+
+html {
+    padding: 0 auto;
+    margin: 0 auto;
+    background: #F2F3F5;
+
+    font-size: 14.5px !important;
+    font-family: "Roboto", "Helvetica" !important;
+    letter-spacing: 0rem !important;
+}
+
+body {
+    overflow-y: scroll !important;
+}
+
+/* стиль ссылок */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* глобальный враппер */
+.globWrapper {
+    background: #F2F3F5;
+    min-height: calc(100vh - 100px);
+    /*отступ от футера*/
+    padding-bottom: 20px;
+}
+
+/* изменить настройки 404 страницы */
+.error404 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/*______________________ MODIFICATORS ______________________*/
+
+.pointer {
+    cursor: pointer;
+}
+
+.floatR {
+    float: right;
+}
+
+/* доп классы статусные */
+.hidden {
+    display: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.textCenter {
+    text-align: center !important;
+}
+
+.fontBold {
+    font-weight: 500 !important;
+}
+
+
+.centerText {
+    text-align: center !important;
+}
+
+.iconGrayColor {
+    color: #a6a6a6 !important;
+}
+
+.underline {
+    text-decoration: underline !important;
+}
+
+/*______________________ MARGINS and PADDINGS ______________________*/
+.mobPaddingLR10 {
+    padding: 0px 0px 0px 0px;
+}
+
+/* убрать отступ блоков в топбаре для мобилок */
+@media screen and (max-width: 800px) {
+    .mobPaddingLR10 {
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+.margin15R {
+    margin-right: 15px;
+}
+
+
+.error404PT {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*______________________ INPUTS ______________________*/
+
+.simpleInput {
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
+}
+
+.simpleInput::after {
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
+    word-break: break-word;
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+}
+
+.simpleInput>textarea {
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
+    /* Firefox shows scrollbar on growth, you can hide like this. */
+}
+
+.simpleInput>textarea,
+.simpleInput::after {
+    max-height: 50px;
+    /* Identical styling required!! */
+    border: 0px solid black;
+    padding: 10px;
+    font: inherit;
+    /* Place on top of each other */
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.simpleInput>textarea:focus {
+    outline: 0;
+}
+
+/*______________________ COMMENTS ELEMENT ______________________*/
+
+.commentTitle {
+    color: #a6a6a6;
+    padding-bottom: 5px;
+}
+
+.commentContent {
+    margin-bottom: 10px;
+    z-index: 5;
+    word-break: break-word;
+}
+
+/*______________________ BIGBLUEBUTTON ELEMENT ______________________*/
+
+.bigBlueButton {
+    font-family: 'Roboto';
+    font-size: 14.2px;
+    letter-spacing: 0rem;
+    position: relative;
+    color: #FFFFFF;
+    padding: 5px 10px 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #0089E5;
+    /* noselect */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.bigBlueButton:hover {
+    background-color: #007bce;
+}
+
+.bigBlueButton:active {
+    background-color: #006eb7;
+}
+
+.grayColor {
+    background-color: #8c8c8c;
+}
+
+.grayColor:hover {
+    background-color: #757575;
+}
+
+.grayColor:active {
+    background-color: #5d5d5d;
+}
+
+.fullWidthBBB {
+    width: 100%;
+    height: 33px;
+}
+
+
+/*______________________ TOPBAR ELEMENT ______________________*/
+/* настройки топбара */
+.topBar {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px #DADADB;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* ширина топбара */
+.topbarFixed {
+    height: inherit;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.topbarMenuHiddenArea {
+    position: absolute;
+    background: transparent;
+    pointer-events: none;
+    height: auto;
+    width: 100vw;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.mainLogo {
+    margin-left: 10px;
+    margin-top: 4px;
+    height: 100%;
+    padding: 6px 14px 15px 0px;
+    cursor: pointer;
+}
+
+.subLogo {
+    margin-top: 4px;
+    margin-left: -6px;
+    height: 100%;
+    padding: 6px 14px 15px 0px;
+    cursor: pointer;
+}
+
+.topbarButton {
+    float: right;
+    margin-top: 7.4px;
+    margin-right: 10px;
+}
+
+/* иконка пользователя справа сверху */
+.topbarUser {
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0089E5;
+    margin: 7px 10px 0 0;
+    /* текст */
+    text-align: center;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 1px 1px;
+}
+
+/* блок меню юзера в топбаре */
+.topbarUserMenuBlock {
+    width: 200px;
+    margin-top: -4px;
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: #FFF;
+    box-shadow: -4px 6px 10px -5px #DADADB;
+    pointer-events: auto;
+}
+
+.topbarUserMenuBlockChild {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.topbarUserMenuBlockChild:hover {
+    background-color: #F5F5F5;
+}
+
+.topbarUserMenuBlockChild:active {
+    background-color: #E5E5E5;
+}
+
+/* блок авторизации в топбаре */
+.topbarAuthBlock {
+    width: 350px;
+    margin-top: -4px;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 15px 15px 15px 15px;
+    background-color: #FFF;
+    box-shadow: -4px 6px 10px -5px #DADADB;
+    pointer-events: auto;
+}
+
+/* убрать отступ блоков в топбаре для мобилок */
+@media screen and (max-width: 800px) {
+    .topbarUserMenuBlock {
+        margin-right: 0px;
+    }
+
+    .topbarAuthBlock {
+        margin-right: 0px;
+    }
+}
+
+/*______________________ FOOTER ELEMENT ______________________*/
+/* главный контейнер футера */
+.footer {
+    position: relative;
+    min-height: 50px;
+    background: #FFFFFF;
+    border-top: 1px solid #E9E9E9;
+}
+
+/* главный враппер футера центровка*/
+.footerMainContent {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+/* главный враппер футера макс ширина */
+.footerChildContent {
+    position: relative;
+    width: 95vw;
+    padding: 25px 10px 25px 10px;
+    min-height: 98px;
+    display: flex;
+    align-items: center;
+    max-width: 1290px;
+}
+
+/* ширина футера если не главная страница */
+.footerChildContentWrapped {
+    width: 750px;
+}
+
+/* центровка текста не главная страница */
+.footerChildContentWrapped span {
+    float: center !important;
+    text-align: center !important;
+    width: 100%;
+}
+
+/*______________________ AUTH PAGE ______________________*/
+
+/* форма регистрации враппер центровка */
+.authContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* форма регистрации макс ширина*/
+.authForm {
+    width: 90vw;
+    max-width: 400px;
+}
+
+/* форма регистрации расширить высоту если это /auth */
+.authSoloContent {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    padding-bottom: 10px;
+}
+
+/* скрыть символы в textarea */
+.authSecuredText input {
+    -webkit-text-security: disc;
+}

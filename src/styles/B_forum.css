@@ -1,0 +1,123 @@
+/* главные врапперы */
+.forumMainWrapper {
+    background: #F2F3F5;
+    /*отступ шапки*/
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.forumSubWrapper {
+    background: inherit;
+    position: relative;
+    width: 100vw;
+    max-width: 650px;
+    /*отступ от шапки*/
+    padding: 25px 0px 0px 0px;
+}
+
+/* дочерний враппер для списка тем */
+.forumChildContent {
+    background-color: #FFF;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 10px;
+    outline: 1px solid #E9E9E9;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+
+/* ______________ [nametag] ____________________ */
+
+/* заглавие форума */
+.titleForum {
+    margin-top: -3px;
+    padding-bottom: 10px;
+}
+
+/* список тем в форумах */
+.forumPost {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    cursor: pointer;
+}
+
+.forumPost:nth-child(2n+3) {
+    background: #F2F2F2;
+}
+
+.forumPost:hover {
+    background-color: #E6F3FC;
+}
+
+.forumPost:active {
+    background-color: #CCE7FA;
+}
+
+.tableForum {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    font-size: 14.2px !important;
+    font-family: "Roboto", "Helvetica" !important;
+    letter-spacing: 0rem !important;
+    word-break: break-word !important;
+}
+
+/* _____________________________________________________________________*/
+
+.outlineForum {
+    border-bottom: 1.5px solid #EAEAEA;
+}
+
+/* ____________________ tags tiles in forum/index  ____________________*/
+.forumChildContentIndex {
+    position: relative;
+    width: 100vw;
+    max-width: 800px;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+@media screen and (max-width: 800px) {
+    .forumChildContentIndex {
+        grid-template-columns: 100%;
+    }
+}
+
+.forumChildContentIndexSolo {
+    grid-template-columns: 100%;
+    margin-top: 40px;
+}
+
+.tagsBlock {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: #FFF;
+    outline: 1.5px solid #E9E9E9;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.tagsBlock:active {
+    background-color: #e6f3fc;
+    outline-color: #80c4f2;
+}
+
+.forumLogo {
+    width: 100px;
+    height: 100px;
+    transform: scale(0.5);
+    background-size: auto, auto;
+}
+
+.tagsBlockTitle {
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}

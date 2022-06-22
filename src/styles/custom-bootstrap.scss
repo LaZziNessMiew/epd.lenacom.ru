@@ -1,0 +1,11 @@
+$primary: #0089E5;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:link {
+    color: #FFF !important;
+}

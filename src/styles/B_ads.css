@@ -1,0 +1,97 @@
+/* основной враппер центрует по горизонтали */
+.adsMainWrapper {
+    background: #F2F3F5;
+    /*отступ шапки*/
+    padding-top: 65px;
+    display: flex;
+    justify-content: center;
+}
+
+/* субвраппер с макс шириной */
+.adsSubWrapper {
+    background: inherit;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* превраппер с текстом перед субвраппером */
+.adsPreWrapper {
+    padding: 0px 2.2px 5px 2.2px;
+    color: #000000;
+}
+
+/* убрать отступ блоков в топбаре для мобилок */
+@media screen and (max-width: 800px) {
+    .adsPreWrapper {
+        padding: 0px 10px 5px 10px;
+    }
+}
+
+
+/* враппер всех объявлений */
+.adsDeskWrapper {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.adsDeskWrapperSolo {
+    grid-template-columns: 100%;
+    margin-top: 20px;
+}
+
+/* карточка одного баннера */
+.singleBannerCard {
+    padding: 2.5px 2.5px 2.5px 2.5px
+}
+
+.adsImg {
+    width: 100%;
+    max-height: 185px;
+}
+
+/* new banner template */
+.adsNewWrapper {
+    background: #F2F3F5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* admin */
+.mainAdsAdmin {
+    align-self: center;
+    justify-self: center;
+    min-height: 180px;
+}
+
+.sampleImg {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.adsNewLeftPanel {
+    justify-content: top;
+}
+
+@media screen and (max-width: 700px) {
+    .adsDeskWrapper {
+        grid-template-columns: 100%;
+    }
+
+    .singleBannerCard {
+        padding: 2.5px 0px 2.5px 0px
+    }
+
+    .adsNewWrapper {
+        grid-template-columns: 100%;
+    }
+}

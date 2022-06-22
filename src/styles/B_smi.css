@@ -1,0 +1,163 @@
+.newsMainWrapper {
+    background: #F2F3F5;
+    /*отступ шапки*/
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsSubWrapper {
+    background: #F2F3F5;
+    position: relative;
+    width: 100vw;
+    max-width: 650px;
+    /*отступ от шапки*/
+    padding: 20px 0px 0px 0px;
+}
+
+
+.newsPostContainer {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 0 auto;
+}
+
+.newsPostLeft {
+    padding: 10px;
+}
+
+.newsPostRight {
+    padding: 10px 10px 10px 0px;
+}
+
+.newsPostTitle {
+    font-size: 18px;
+    font-weight: 640;
+}
+
+.newsPostImg {
+    width: 100% !important;
+    max-height: 130px;
+}
+
+.newsBorder {
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    height: 0px;
+    border-bottom: 1.5px solid #EAEAEA;
+}
+
+.smilePost {
+    height: 55px;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
+.smilePostIcons {
+    cursor: pointer;
+    display: flex;
+    /* align horizontal */
+    justify-content: center;
+    /* align vertical */
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    outline: 1.5px solid #E9E9E9;
+    border-radius: 4px;
+}
+
+.smilePostIcons:active {
+    outline-color: #4daced;
+    background-color: #cce7fa;
+}
+
+.smilePostIconActive {
+    outline-color: #4daced;
+    background-color: #cce7fa;
+}
+
+.smilePostIcons span {
+    color: #a6a6a6;
+    margin-left: 7px;
+}
+
+.between {
+    margin: 10px 5px 10px 5px;
+}
+
+.left-edge {
+    margin: 10px 5px 10px 0px;
+}
+
+.right-edge {
+    margin: 10px 0px 10px 5px;
+}
+
+.newsPostInfo {
+    font-size: 15px;
+    font-weight: 499;
+    display: inline-block;
+    color: #a6a6a6;
+}
+
+.newsPostInfoChild {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.newsPostInfoChild i {
+    padding: 0px 7px 0px 0px;
+    width: inherit;
+    color: inherit;
+    text-align: center;
+}
+
+.newsPostInfoChild span {
+    margin-top: -2px;
+    width: inherit;
+    color: inherit;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .newsPostContainer {
+        display: grid;
+        grid-template-columns: 38% 62%;
+        padding: 0 auto;
+    }
+}
+
+
+.statIconsBorderless {
+    min-width: 60px;
+    height: 30px;
+    display: inline-block;
+    color: #a6a6a6;
+}
+
+.statIconsBorderless .actionBtnChild {
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*иконка экшнкнопки*/
+.statIconsBorderless .actionBtnChild i {
+    padding: 0px 0px 0px 0px;
+    width: inherit;
+    color: inherit;
+    text-align: left;
+}
+
+/*текст экшнкнопки*/
+.statIconsBorderless .actionBtnChild span {
+    margin-top: -2.5px;
+    margin-left: 11px;
+    width: inherit;
+    color: inherit;
+    text-align: left;
+}

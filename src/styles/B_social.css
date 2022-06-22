@@ -1,0 +1,329 @@
+/* главные врапперы */
+.palataMainWrapper {
+    background: #F2F3F5;
+    /*отступ шапки*/
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.palataSubWrapper {
+    background: inherit;
+    position: relative;
+    width: 100vw;
+    max-width: 650px;
+    /*отступ от шапки*/
+    padding: 20px 0px 0px 0px;
+}
+
+/* EPD слева новостные ссылки */
+.palataPost {
+    margin-bottom: 20px;
+    background: white;
+    padding: 0px;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    outline: 1.5px solid #E9E9E9;
+    border-radius: 4px;
+}
+
+.palataPostHideContent {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.palataShowFull {
+    z-index: 10;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #EBF1F4;
+    color: #a6a6a6;
+    padding-top: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.palataShowFull:hover {
+    background-color: #E6EBED;
+}
+
+.palataShowFull:active {
+    background-color: #E1EBEF;
+}
+
+
+.palataComment {
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    white-space: pre-line;
+    outline: 1.5px solid #E9E9E9;
+    border-radius: 4px;
+}
+
+.palataCommentNested {
+    margin-top: 10px;
+    padding-left: 40px;
+}
+
+.palataCommentNestedStop {
+    margin-top: 10px;
+    padding-left: 0px;
+}
+
+.titlePost {
+    top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 499;
+    line-height: 1.2;
+}
+
+.infoPost {
+    color: #a6a6a6;
+    padding-bottom: 15px;
+}
+
+
+.contentPost {
+    margin-bottom: 10px;
+    z-index: 5;
+}
+
+.padding10TRBL {
+    padding: 10px 10px 10px 10px;
+}
+
+.padding10TRL {
+    padding: 7px 10px 0px 10px;
+}
+
+.padding10RL {
+    padding: 0px 10px 0px 10px;
+}
+
+.padding10RBL {
+    padding: 0px 10px 10px 10px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+/*________________EPD_______________page nav */
+
+/*Экшнкнопка*/
+.actionBtnArea {
+    height: 30px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.actionBtnPageNavArea {
+    text-align: center;
+}
+
+.actionBtnPageNav {
+    background: #0089E5;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.actionBtnPageNav:active {
+    color: white;
+    background-color: #006eb7;
+}
+
+.actionBtnCommendPost {
+    min-width: 60px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: white;
+    outline: 1px solid #DEE2E6;
+    color: #a6a6a6;
+}
+
+/*если экшнкнопка активна*/
+.actionBtnActive {
+    background: #0060a0;
+}
+
+/*если экшнкнопка активна*/
+.actionBtnLight {
+    background: #DEE2E6;
+    color: gray;
+}
+
+/*центровка экшнкнопки*/
+.actionBtnCommendPost .actionBtnChild {
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*иконка экшнкнопки*/
+.actionBtnCommendPost .actionBtnChild i {
+    padding: 0px 0px 0px 0px;
+    width: inherit;
+    color: inherit;
+    text-align: left;
+}
+
+/*текст экшнкнопки*/
+.actionBtnCommendPost .actionBtnChild span {
+    margin-top: -2.5px;
+    margin-left: 11px;
+    width: inherit;
+    color: inherit;
+    text-align: left;
+}
+
+/*центровка экшнкнопки*/
+.actionBtnChild {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.actionBtnChildPadding {
+    padding: 0px 5px 0px 5px;
+}
+
+/*иконка экшнкнопки*/
+.actionBtnChild i {
+    padding: 0px 0px 0px 0px;
+    width: inherit;
+    color: inherit;
+    text-align: center;
+}
+
+/*текст экшнкнопки*/
+.actionBtnChild span {
+    margin-top: -1px;
+    padding: 0px 0px 0px 0px;
+    width: inherit;
+    color: inherit;
+    text-align: center;
+}
+
+/*______________EDK______________add new post*/
+.grow-wrap {
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
+}
+
+.grow-wrap-buttons {
+    background: #F9F9FB;
+    padding: 10px 10px 10px 10px;
+}
+
+.grow-wrap::after {
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
+    word-break: break-word;
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+}
+
+.grow-wrap>textarea {
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
+    /* Firefox shows scrollbar on growth, you can hide like this. */
+    overflow: hidden;
+}
+
+.grow-wrap>textarea,
+.grow-wrap::after {
+    /* Identical styling required!! */
+    border: 0px solid black;
+    padding: 10px;
+    font: inherit;
+    /* Place on top of each other */
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.grow-wrap>textarea:focus {
+    outline: 0;
+}
+
+/*______________EDK______________input fields*/
+
+.inputField {
+    outline: 1px solid #DEE2E6;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.addPostBtns {
+    background: #FFF;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addPostBtn {
+    background-color: #0089E5;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    --smooth-corners: 4;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/*настройки изображения в посте*/
+.postImg {
+    width: 100%;
+    z-index: 5
+}
+
+.activeBtn {
+    background: red;
+}
+
+@media screen and (max-width: 900px) {
+
+    .palataMainWrapper {
+        background: #F2F3F5;
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .leftContent {
+        background: #0a2f79;
+        position: relative;
+        max-width: 900px;
+        min-width: 700px;
+    }
+}

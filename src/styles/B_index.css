@@ -1,0 +1,468 @@
+/* главный враппер центровка */
+.mainContent {
+    background: #F2F3F5;
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+/* субвраппер макс ширина */
+.mainChildContent {
+    background: #F2F3F5;
+    position: relative;
+    width: 100vw;
+    margin-top: 20px;
+    padding: 0px 30px 0px 30px;
+    max-width: 1350px;
+}
+
+/* блоки с топ 5 постов */
+.topicBlocks {
+    background: #FFFFFF;
+    width: calc(100%-20px);
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    overflow-wrap: break-word;
+    outline: 1.5px solid #E9E9E9;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.childrenTBlock {
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+/* заворачиватель для карточек  */
+.topicBlocksTop {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.childrenTBlockTop {
+    background: #FFFFFF;
+    min-height: 100px;
+    position: inherit;
+    overflow-wrap: break-word;
+    outline: 1.5px solid #E9E9E9;
+    border-radius: 4px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.childrenTBlockTop0 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-bottom: 20px;
+}
+
+.childrenTBlockTop1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-bottom: 20px;
+}
+
+.childrenTBlockTop2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.childrenTBlockTop3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.childrenTBlockTop4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.childrenTBlockTop5 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/* NewsOfTheDay card */
+.headerTBlockTop {
+    cursor: pointer;
+    display: flex;
+    /* align horizontal */
+    justify-content: center;
+    /* align vertical */
+    align-items: center;
+    text-align: center;
+    /* background-color: yellow; */
+    height: 100%;
+    width: 100%;
+}
+
+.indexDayNews {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    border-radius: 4px;
+}
+
+.headerIndexDayNews {
+    width: 100%;
+    max-height: 130px;
+    word-break: break-word;
+    overflow-y: auto;
+}
+
+.headerIndexDayNews::-webkit-scrollbar {
+    display: none;
+}
+
+.indexNewsOfTheDayFooter {
+    width: 100%;
+    height: 20px;
+}
+
+.indexNewsOfTheDayFooter .newsPostInfo {
+    color: white !important;
+}
+
+/* 2row blocks wrapper div */
+.headerTBlock {
+    display: flex;
+    /* align vertical */
+    align-items: center;
+    /* background-color: yellow; */
+    height: 45px;
+    width: 100%;
+    font-weight: 500;
+    padding: 0px 15px 0px 15px;
+}
+
+/* 2row blocks wrapper div */
+.contentTBlock {
+    padding: 10px 15px 15px 15px;
+    width: 100%;
+    background: inherit;
+    display: grid;
+    grid-template-columns: 50px calc(100% - 50px);
+}
+
+/* иконки под каждым постом в списке */
+.contentTFooter {
+    width: 100%;
+    height: 0px;
+}
+
+.contentTFooter .newsPostInfo {
+    color: #a6a6a6 !important;
+}
+
+.contentTImg {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    color: red;
+    border-radius: 4px;
+}
+
+.contentTTtext {
+    padding: 0px 0px 0px 10px;
+}
+
+/* 3row blocks wrapper div */
+.topicBlocksBottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    overflow-wrap: break-word;
+}
+
+/* 3row blocks subwrapper child div */
+.childrenTBlockBottom {
+    background: #FFFFFF;
+    min-height: 100px;
+    position: inherit;
+    overflow-wrap: break-word;
+    outline: 1.5px solid #E9E9E9;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.headerTBlockBottom {
+    cursor: pointer;
+    display: flex;
+    /* align horizontal */
+    justify-content: center;
+    /* align vertical */
+    align-items: center;
+    text-align: center;
+    /* background-color: yellow; */
+    height: 100%;
+    width: 100%;
+}
+
+/* стили карточек */
+.cardTitle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+    font-weight: 500;
+}
+
+.cardContent {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/* OPROS CARD */
+
+.oprosContent {
+    display: flex;
+    justify-content: top;
+    align-content: top;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 15px 0px 15px;
+}
+
+.oprosQuestion {
+    display: flex;
+    justify-content: top;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.oprosQuestionStyle {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #e6f3fc;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.oprosQuestionStyle:hover {
+    background-color: #cce7fa;
+}
+
+.oprosQuestionStyleAns {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+/* WEATHER CARD */
+
+.weatherCard {
+    float: left;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.weatherCardElImg {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.weatherIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.weatherCardElTxt {
+    font-size: 13px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+/* YAKNET CARD */
+
+.yaknetCard {
+    float: left;
+    text-align: left;
+}
+
+/* DOLLAR CARD */
+
+.dollarCard {
+    display: grid;
+    font-size: 12px;
+    grid-template-columns: 20% 14% 14% 24% 14% 14%;
+    padding: 0px 15px 15px 15px;
+    float: left;
+    text-align: left;
+}
+
+.dollarCardColumn {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.dCCPL {
+    padding-left: 15px;
+}
+
+/* mobile version variants */
+@media screen and (max-width: 800px) {
+    .mainChildContent {
+        padding: 0px;
+    }
+
+    .topicBlocks {
+        background: #FFFFFF;
+        width: calc(100%-20);
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 0px;
+    }
+
+    .childrenTBlock {
+        padding-bottom: 10px;
+    }
+
+    /* Top topic block change */
+    .childrenTBlockTop0 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        margin-bottom: 10px;
+    }
+
+    .childrenTBlockTop1 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin-bottom: 10px;
+    }
+
+    .childrenTBlockTop2 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        margin-bottom: 10px;
+    }
+
+    .childrenTBlockTop3 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
+        margin-bottom: 10px;
+    }
+
+    .childrenTBlockTop4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 5;
+        margin-bottom: 10px;
+    }
+
+    .childrenTBlockTop5 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 6;
+        margin-bottom: 10px;
+    }
+
+    /* Bottom topic block change */
+    .topicBlocksBottom {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .childrenTBlockBottom {
+        background: #FFFFFF;
+        min-height: 100px;
+        position: inherit;
+        overflow-wrap: break-word;
+        outline: 1.5px solid #E9E9E9;
+        border-radius: 4px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .topicBlocksTop {
+        margin-bottom: 0px;
+    }
+
+    .dollarCard {
+        grid-template-columns: 50% 25% 25%;
+        font-size: 14px;
+    }
+
+    .dCCPL {
+        padding-left: 0px;
+    }
+}
+
+/*__________________________OPROS PROGRESSBAR____________________*/
+.oproProgressbar {
+    height: 2px;
+    position: relative;
+    background: #E6F3FC;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.oproProgressbar>span {
+    display: block;
+    height: 100%;
+    background-color: #0089E5;
+
+    position: relative;
+    overflow: hidden;
+}
